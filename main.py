@@ -74,8 +74,8 @@ def main(folder_path, output_doc_path):
 
 if __name__ == "__main__":
     # Default input and output paths
-    default_folder_path = r"./input_folder"
-    default_output_doc_path = r"./output_folder_structure.docx"
+    default_folder_path = r"C:\Users\prote\AppData\Roaming\.anaconda\navigator"
+    default_output_doc_path = r"C:\Users\prote\Downloads\hooose\output_folder_structure.docx"
     main(default_folder_path, default_output_doc_path)
 
     # For command-line usage, uncomment the following lines:
