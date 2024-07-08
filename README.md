@@ -36,6 +36,7 @@ The script can also be run with default input and output paths:
 
 ```bash
 python folder_structure_to_word.py
+```
 
 ### Command Line
 
