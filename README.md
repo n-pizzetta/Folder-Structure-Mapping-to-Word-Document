@@ -31,6 +31,12 @@ This project generates a Word document representing the structure of a network f
 
 ## Usage
 
+### Default Paths
+The script can also be run with default input and output paths:
+
+```bash
+python folder_structure_to_word.py
+
 ### Command Line
 
 To run the script from the command line, use:
