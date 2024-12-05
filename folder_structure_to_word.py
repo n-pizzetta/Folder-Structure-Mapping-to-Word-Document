@@ -21,10 +21,14 @@ def get_color_by_extension(extension):
     """
     Get color based on file extension.
     """
+
+    extension = extension.lower()
+
     color_map = {
         '.txt': RGBColor(255, 0, 0),      # Red
         '.py': RGBColor(0, 128, 0),       # Green
         '.jpg': RGBColor(255, 255, 0),    # Yellow
+        '.jpeg': RGBColor(255, 255, 0),   # Yellow
         '.png': RGBColor(255, 165, 0),    # Orange
         '.pdf': RGBColor(128, 0, 128),    # Purple
         # Add more file types and colors as needed
@@ -69,7 +73,11 @@ def main(folder_path, output_doc_path):
     """
     Main function to collect folder structure and create the document.
     """
+    print(f"Scanning folder: {folder_path}")
     folder_structure = collect_folder_structure(folder_path)
+    if not folder_structure:
+        print("No files or directories found. Check the folder path.")
+        return
     create_doc(folder_structure, output_doc_path)
 
 if __name__ == "__main__":
@@ -78,10 +86,10 @@ if __name__ == "__main__":
     default_output_doc_path = r"./output_folder_structure.docx"
     main(default_folder_path, default_output_doc_path)
 
-    # For command-line usage, uncomment the following lines:
-    # import argparse
-    # parser = argparse.ArgumentParser(description="Generate a Word document of a folder structure.")
-    # parser.add_argument("folder_path", help="Path to the folder to diagram.")
-    # parser.add_argument("output_doc_path", help="Path to save the output Word document file.")
-    # args = parser.parse_args()
-    # main(args.folder_path, args.output_doc_path)
+    # For command-line usage, uncomment the following lines and comment the above lines:
+    #import argparse
+    #parser = argparse.ArgumentParser(description="Generate a Word document of a folder structure.")
+    #parser.add_argument("folder_path", help="Path to the folder to diagram.")
+    #parser.add_argument("output_doc_path", help="Path to save the output Word document file.")
+    #args = parser.parse_args()
+    #main(args.folder_path, args.output_doc_path)

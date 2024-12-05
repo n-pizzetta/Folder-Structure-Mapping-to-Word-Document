@@ -21,7 +21,7 @@ This project generates a Word document representing the structure of a network f
 1. Clone the repository:
     ```bash
     git clone https://github.com/MathFreedom/Folder-Structure-Mapping-to-Word-Document.git
-    cd network-folder-structure-mapping
+    cd Folder-Structure-Mapping-to-Word-Document
     ```
 
 2. Install the required packages:
